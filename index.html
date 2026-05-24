@@ -1,330 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>DEAXD</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirection...</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script>
+    // Liste des sites autorisés
+    const sites = [
+      "https://deaxdstream.onrender.com/",
+      "https://deaxdmovie.onrender.com/"
+    ];
 
-<style>
+    // Choix aléatoire
+    const target = sites[Math.floor(Math.random() * sites.length)];
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Inter,sans-serif;
-}
+    // Redirection immédiate
+    window.location.replace(target);
+  </script>
 
-body{
-  background:#070707;
-  color:white;
-}
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://deaxdstream.onrender.com/">
+  </noscript>
 
-/* BACKGROUND GLOW */
-
-body::before{
-  content:"";
-  position:fixed;
-  width:500px;
-  height:500px;
-  background:#ff0033;
-  filter:blur(180px);
-  opacity:0.12;
-  top:-200px;
-  left:-200px;
-  z-index:-1;
-}
-
-body::after{
-  content:"";
-  position:fixed;
-  width:450px;
-  height:450px;
-  background:#7c3aed;
-  filter:blur(160px);
-  opacity:0.10;
-  bottom:-200px;
-  right:-200px;
-  z-index:-1;
-}
-
-/* LAYOUT */
-
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 25px;
-}
-
-/* HEADER */
-
-.header{
-  text-align:center;
-  margin-bottom:50px;
-}
-
-.logo{
-  font-size:60px;
-}
-
-h1{
-  font-size:56px;
-  font-weight:800;
-  letter-spacing:2px;
-}
-
-h1 span{
-  color:#ff0033;
-}
-
-.subtitle{
-  color:#888;
-  font-size:14px;
-  letter-spacing:3px;
-  margin-top:8px;
-}
-
-/* MAIN BUTTONS */
-
-.buttons{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  margin-top:30px;
-}
-
-.btn{
-  position:relative;
-  overflow:hidden;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:22px 26px;
-
-  border-radius:16px;
-
-  background:#0e0e0e;
-  border:1px solid #1a1a1a;
-
-  text-decoration:none;
-  color:white;
-
-  transition:0.3s;
-}
-
-/* GLOW EFFECT */
-
-.btn::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  background:linear-gradient(90deg,#ff0033,#7c3aed);
-  opacity:0;
-  filter:blur(20px);
-  transition:0.35s;
-  z-index:0;
-}
-
-.btn:hover::before{
-  opacity:0.35;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
-  border-color:#ff0033;
-}
-
-.btn-content{
-  position:relative;
-  z-index:2;
-}
-
-.btn strong{
-  font-size:18px;
-}
-
-.btn small{
-  color:#888;
-  font-size:13px;
-}
-
-/* SECONDARY BLOCKS */
-
-.grid{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
-.card{
-  background:#0d0d0d;
-  border:1px solid #1a1a1a;
-  border-radius:14px;
-  padding:18px;
-
-  transition:0.25s;
-}
-
-.card:hover{
-  border-color:#333;
-  transform:translateY(-3px);
-}
-
-.card h3{
-  font-size:16px;
-  margin-bottom:6px;
-}
-
-.card p{
-  font-size:13px;
-  color:#888;
-  line-height:1.5;
-}
-
-/* COPY */
-
-.copy{
-  margin-top:35px;
-  display:flex;
-  gap:10px;
-}
-
-.copy input{
-  flex:1;
-  padding:14px;
-  border-radius:12px;
-  background:#0d0d0d;
-  border:1px solid #1a1a1a;
-  color:#aaa;
-}
-
-.copy button{
-  padding:14px 18px;
-  border:none;
-  border-radius:12px;
-  background:#ff0033;
-  color:white;
-  cursor:pointer;
-
-  box-shadow:
-  0 0 18px rgba(255,0,51,0.35);
-  transition:0.3s;
-}
-
-.copy button:hover{
-  transform:scale(1.05);
-  box-shadow:
-  0 0 25px rgba(255,0,51,0.55);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:700px){
-
-  h1{
-    font-size:40px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .copy{
-    flex-direction:column;
-  }
-
-}
-
-</style>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
-
-<div class="container">
-
-  <!-- HEADER -->
-  <div class="header">
-
-    <div class="logo">💀</div>
-
-    <h1>DEA<span>XD</span></h1>
-
-    <div class="subtitle">
-      HUB MULTI-PLATEFORME • STREAMING • OUTILS • ACCÈS RAPIDE
-    </div>
-
-  </div>
-
-  <!-- MAIN BUTTONS -->
-  <div class="buttons">
-
-    <a class="btn" href="https://DeaxdMovie.onrender.com" target="_blank">
-
-      <div class="btn-content">
-        <strong>DEAXD MOVIE</strong><br>
-        <small>Accès principal streaming</small>
-      </div>
-
-    </a>
-
-    <a class="btn" href="https://Streaming-site-0sp2.onrender.com" target="_blank">
-
-      <div class="btn-content">
-        <strong>DEAXD STREAM</strong><br>
-        <small>Accès secondaire stable</small>
-      </div>
-
-    </a>
-
-  </div>
-
-  <!-- SECONDARY CONTENT -->
-  <div class="grid">
-
-    <div class="card">
-      <h3>🎬 Streaming</h3>
-      <p>Films et séries accessibles rapidement sans compte.</p>
-    </div>
-
-    <div class="card">
-      <h3>⚡ Performance</h3>
-      <p>Interface légère optimisée pour tous les appareils.</p>
-    </div>
-
-    <div class="card">
-      <h3>🔗 Accès multiple</h3>
-      <p>Plusieurs liens disponibles pour éviter les coupures.</p>
-    </div>
-
-    <div class="card">
-      <h3>🛡️ Stable</h3>
-      <p>Infrastructure pensée pour rester accessible en continu.</p>
-    </div>
-
-  </div>
-
-  <!-- COPY -->
-  <div class="copy">
-
-    <input id="copyInput" value="https://DeaxdMovie.onrender.com" readonly>
-
-    <button onclick="copyLink()">Copier</button>
-
-  </div>
-
-</div>
-
-<script>
-function copyLink(){
-  const input = document.getElementById("copyInput");
-  navigator.clipboard.writeText(input.value);
-  alert("Lien copié !");
-}
-</script>
-
+  <p>Redirection en cours...</p>
 </body>
 </html>
