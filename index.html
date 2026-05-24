@@ -3,41 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirection...</title>
-
-  <script>
-    // Liste des sites autorisés
-    const sites = [
-      "https://deaxdstream.onrender.com/",
-      "https://deaxdmovie.onrender.com/"
-    ];
-
-    // Choix aléatoire
-    const target = sites[Math.floor(Math.random() * sites.length)];
-
-    // Redirection immédiate
-    window.location.replace(target);
-  </script>
-
-  <noscript>
-    <meta http-equiv="refresh" content="0;url=https://deaxdstream.onrender.com/">
-  </noscript>
+  <title>Accueil</title>
 
   <style>
     body {
       margin: 0;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       font-family: Arial, sans-serif;
-      background: #111;
+      background: #0f0f0f;
       color: white;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #1f1f1f;
+      color: white;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #333;
+      transform: scale(1.05);
     }
   </style>
 </head>
 
 <body>
-  <p>Redirection en cours...</p>
+
+  <h1>Choisis ton site</h1>
+
+  <div class="btn-container">
+    <button onclick="goStream()">Streaming</button>
+    <button onclick="goMovie()">Movies</button>
+  </div>
+
+  <script>
+    function goStream() {
+      window.location.href = "https://deaxdstream.onrender.com/";
+    }
+
+    function goMovie() {
+      window.location.href = "https://deaxdmovie.onrender.com/";
+    }
+  </script>
+
 </body>
 </html>
