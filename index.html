@@ -2,65 +2,296 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>DEAXD</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: white;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Oswald', sans-serif;
     }
 
-    h1 {
-      margin-bottom: 30px;
+    body{
+      background: radial-gradient(circle at top, #061a33, #000);
+      color:white;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:30px;
+      overflow-x:hidden;
     }
 
-    .btn-container {
-      display: flex;
-      gap: 20px;
+    .container{
+      width:100%;
+      max-width:520px;
+      text-align:center;
     }
 
-    button {
-      padding: 15px 25px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #1f1f1f;
-      color: white;
-      transition: 0.2s;
+    /* LOGO */
+
+    .logo{
+      margin-bottom:40px;
     }
 
-    button:hover {
-      background: #333;
-      transform: scale(1.05);
+    .skull{
+      font-size:75px;
+      display:inline-block;
+      animation:glow 3s ease-in-out infinite;
     }
+
+    @keyframes glow{
+      0%{
+        filter:drop-shadow(0 0 10px #4da3ff);
+      }
+      50%{
+        filter:drop-shadow(0 0 25px #bfe3ff);
+      }
+      100%{
+        filter:drop-shadow(0 0 10px #4da3ff);
+      }
+    }
+
+    h1{
+      margin-top:10px;
+      font-size:65px;
+      letter-spacing:6px;
+      font-weight:700;
+    }
+
+    h1 span{
+      color:#4da3ff;
+    }
+
+    .subtitle{
+      margin-top:5px;
+      color:#9bbcff;
+      font-size:13px;
+      letter-spacing:5px;
+      font-weight:300;
+    }
+
+    /* SEPARATOR */
+
+    .line{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin:28px 0 18px;
+      color:#7fb6ff;
+      font-size:13px;
+      letter-spacing:3px;
+    }
+
+    .line::before,
+    .line::after{
+      content:"";
+      flex:1;
+      height:1px;
+      background:#143a66;
+    }
+
+    /* BUTTONS */
+
+    .buttons{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .btn{
+      background:rgba(10,20,40,0.7);
+      border:1px solid #1e3d66;
+      border-radius:18px;
+      padding:24px;
+      text-decoration:none;
+      color:white;
+      transition:0.35s;
+      backdrop-filter: blur(6px);
+    }
+
+    .btn:hover{
+      transform:scale(1.04);
+      background:#4da3ff;
+      color:#000;
+      box-shadow:0 0 25px rgba(77,163,255,0.6);
+    }
+
+    .btn-title{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .btn-sub{
+      margin-top:8px;
+      font-size:14px;
+      opacity:0.7;
+      font-weight:300;
+    }
+
+    /* COPY */
+
+    .copy{
+      display:flex;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .copy input{
+      flex:1;
+      background:#0b1a2e;
+      border:1px solid #1e3d66;
+      border-radius:14px;
+      padding:14px;
+      color:#9cc7ff;
+      outline:none;
+      font-size:13px;
+      font-family:Arial;
+    }
+
+    .copy button{
+      background:#4da3ff;
+      border:none;
+      border-radius:14px;
+      padding:0 24px;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .copy button:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 18px rgba(77,163,255,0.6);
+    }
+
+    /* FEATURES */
+
+    .features{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:10px;
+    }
+
+    .feature{
+      background:rgba(10,20,40,0.6);
+      border:1px solid #1e3d66;
+      border-radius:18px;
+      padding:24px 18px;
+      transition:0.3s;
+    }
+
+    .feature:hover{
+      transform:translateY(-4px);
+      border-color:#4da3ff;
+      box-shadow:0 0 18px rgba(77,163,255,0.3);
+    }
+
+    .feature-icon{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .feature h3{
+      font-size:20px;
+      margin-bottom:8px;
+      font-weight:500;
+    }
+
+    .feature p{
+      color:#9bbcff;
+      font-size:13px;
+      line-height:1.6;
+      font-weight:300;
+    }
+
+    @media(max-width:560px){
+      .features{grid-template-columns:1fr;}
+      h1{font-size:52px;}
+      .btn-title{font-size:24px;}
+    }
+
   </style>
 </head>
 
 <body>
 
-  <h1>Choisis ton site</h1>
+  <div class="container">
 
-  <div class="btn-container">
-    <button onclick="goStream()">Streaming</button>
-    <button onclick="goMovie()">Movies</button>
+    <div class="logo">
+      <div class="skull">💀</div>
+      <h1>DEA<span>XD</span></h1>
+      <div class="subtitle">STREAMING PREMIUM</div>
+    </div>
+
+    <div class="line">ACCÈS DIRECT</div>
+
+    <div class="buttons">
+
+      <a class="btn" href="https://deaxdmovie.onrender.com/" target="_blank">
+        <div class="btn-title">DEAXD MOVIE</div>
+        <div class="btn-sub">Lien principal • Streaming HD</div>
+      </a>
+
+      <a class="btn" href="https://deaxdstream.onrender.com/" target="_blank">
+        <div class="btn-title">DEAXD STREAM</div>
+        <div class="btn-sub">Lien secondaire • Accès rapide</div>
+      </a>
+
+    </div>
+
+    <div class="line">PARTAGER CE SITE</div>
+
+    <div class="copy">
+      <input type="text" value="https://deaxdmovie.onrender.com" id="copyInput" readonly>
+      <button onclick="copyLink()">Copier</button>
+    </div>
+
+    <div class="line">POURQUOI DEAXD</div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">🎬</div>
+        <h3>Catalogue</h3>
+        <p>Films et séries mis à jour régulièrement.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Streaming HD</h3>
+        <p>Serveurs rapides et fluides sans coupure.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Sans Compte</h3>
+        <p>Accès immédiat sans inscription.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🛡️</div>
+        <h3>Liens Stables</h3>
+        <p>Plusieurs accès toujours disponibles.</p>
+      </div>
+
+    </div>
+
   </div>
 
   <script>
-    function goStream() {
-      window.location.href = "https://deaxdstream.onrender.com/";
-    }
-
-    function goMovie() {
-      window.location.href = "https://deaxdmovie.onrender.com/";
+    function copyLink(){
+      const input = document.getElementById("copyInput");
+      navigator.clipboard.writeText(input.value);
+      alert("Lien copié !");
     }
   </script>
 
